@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cómo cargar un video de YouTube</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4; /* Fondo por defecto */
+            background-image: url('imagenes/7-acdc.jpg'); /* Fondo de imagen */
+            background-size: cover; /* Asegura que la imagen cubra toda la pantalla */
+            background-position: center center; /* Centra la imagen */
+            color: #333;
+            text-align: center;
+        }
+
+        /* Título principal */
+        h1 {
+            font-size: 2.5em;
+            color: #fff; /* Texto blanco para que contraste con el fondo */
+            margin-top: 20px;
+        }
+
+        /* Párrafos */
+        p {
+            font-size: 1.2em;
+            color: #fff; /* Texto blanco */
+            margin: 10px 0;
+        }
+
+        /* Estilo para el contenedor de video */
+        video, iframe {
+            max-width: 100%;
+            margin: 20px 0;
+            border: 3px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Ajustar el video local */
+        video {
+            max-width: 640px;
+            width: 100%;
+        }
+
+        /* Ajustar el iframe de YouTube */
+        iframe {
+            max-width: 560px;
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        /* Asegurarse de que el video de fondo sea responsivo */
+        @media (max-width: 768px) {
+            video {
+                max-width: 100%;
+                width: 100%;
+            }
+            iframe {
+                max-width: 100%;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Reproducción de videos en HTML</h1>
+    <p>A continuación se muestra un video incrustado en la página web:</p>
+
+    <!-- Video local -->
+    <video width="640" height="360" controls>
+        <source src="video.mp4" type="video/mp4">
+        <source src="video.webm" type="video/webm">
+    </video>
+
+    <br><br>
+
+    <!-- Video de YouTube -->
+    <iframe 
+        width="560" 
+        height="315" 
+        src="https://www.youtube.com/embed/FrFvNphZ5BQ" 
+        title="Video de YouTube - ACDC" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen>
+    </iframe>
+</body>
+</html>
